@@ -6,13 +6,11 @@ import { cookies } from 'next/headers'
 // import * as jose from 'jose'
 import { cache } from 'react'
 
-// JWT types
 interface JWTPayload {
   userId: string
   [key: string]: string | number | boolean | null | undefined
 }
 
-// Secret key for JWT signing (in a real app, use an environment variable)
 const JWT_SECRET = new TextEncoder().encode(
   process.env.JWT_SECRET || 'your-secret-key-min-32-chars-long!!!'
 )
